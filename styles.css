@@ -1,3 +1,23 @@
+:root {
+    --color-principal: hsl(300, 43%, 22%);
+    --color-secondary: hsl(333, 80%, 67%);
+    --color-principal-opacity: hsl(303, 10%, 53%);
+    --color-title-card: hsl(300, 24%, 96%);
+    --color-white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+}
+
 .footer {
     font-size: 11px;
     text-align: center;

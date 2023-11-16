@@ -1,8 +1,8 @@
 :root {
     --color-principal: hsl(300, 43%, 22%);
-    --color-secondary: hsl(333, 80%, 67%);
-    --color-principal-opacity: hsl(303, 10%, 53%);
-    --color-title-card: hsl(300, 24%, 96%);
+    --color-destacate: hsl(333, 80%, 67%);
+    --color-description: hsl(303, 10%, 53%);
+    --color-secondary: hsl(300, 24%, 96%);
     --color-white: hsl(0, 0%, 100%);
 }
 
@@ -12,15 +12,169 @@
     box-sizing: border-box;
 }
 
-body {
-    position: relative;
+body {    
     font-family: 'League Spartan', sans-serif;
     font-size: 15px;
 }
 
-.footer {
-    font-size: 11px;
+/* Background Image */
+.picture__top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.picture__bottom {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+/* CONTENT */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5rem 0;
+    width: 80%; 
+    min-height: 95vh;
+}
+
+/* Layout Top */
+.layout__top {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+
+.left {
+    flex-basis: 40%;
+}
+
+.left__title {
+    color: var(--color-principal);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.left__description {
+    color: var(--color-description);
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+
+.right {    
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;    
+}
+
+.right__rated {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;    
+    background-color: var(--color-secondary);
+    margin: 0.5rem;
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+    width: 70%;    
+}
+
+.rated__start {
+    margin-left: 10rem;
+}
+
+.rated__middle {
+    margin-left: 13rem;
+}
+
+.rated__end {
+    margin-left: 16rem;
+}
+
+.rated__item {
+    color: var(--color-principal);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* LAYOUT BOTTOM */
+.layout__bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.card {
+    background-color: var(--color-principal);
+    border-radius: 0.5rem;
+    padding: 2.5rem;
+    width: 100%;
+    height: 50%;
+}
+
+.card__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card__header-container-img {
+    width: 3rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+.card__header-image {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.card__header-title {
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.card__header-subtitle {
+    color: var(--color-destacate);
+    font-size: 1.05rem;
+}
+
+.card__body-description {
+    color: var(--color-white);
+    font-size: 1.05rem;
+    line-height: 1.2;
+}
+
+.card__start {
+    margin-top: 0;
+}
+
+.card__middle {
+    margin-top: 2rem;
+}
+
+.card__end {
+    margin-top: 4rem;
+}
+
+
+/* FOOTER */
+.attribution {
+    padding: 1rem 0;
+    font-size: 0.8rem;
     text-align: center;
 }
 
-.footer a {color: hsl(228, 45%, 44%);}
+.attribution a {color: hsl(228, 45%, 44%);}
